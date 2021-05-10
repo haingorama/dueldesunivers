@@ -57,6 +57,9 @@ ol {
   margin-bottom: 30px;
   font-size: 1.2rem;
 }
+footer> p {
+  margin-top: 50px;
+}
 /*  H1 TITRE */
 .glitch {
   color: white;

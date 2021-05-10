@@ -543,6 +543,10 @@ $ItemsDc = [$movie101, $movie102, $movie103, $movie104, $movie105, $movie106, $m
         </div>
     </main>
 
+    <footer>
+        <p>Haingo Ramaroson</p>
+    </footer>
+
     <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src='https://cdn.rawgit.com/wagerfield/parallax/master/source/jquery.parallax.js'></script>
