@@ -34,24 +34,24 @@
     margin-bottom: 70px;
   }
   header h2 {
-     margin: 70px 0 40px;
+    margin: 70px 0 40px;
   }
   h2 {
-     margin: 150px 0 50px;
-     font-size: 2.1em;
+    margin: 150px 0 50px;
+    font-size: 2.1em;
   }
 
   .main {
         width:1170px
   }
 /*  H1 TITRE */
-   .glitch {
-        color: white;
-        font-size: 98px;
-        position: relative;
-        width: 887px;
-        margin: 0 auto;
-        z-index: 1;
+  .glitch {
+    color: white;
+    font-size: 97px;
+    position: relative;
+    width: 915px;
+    margin: 0 auto;
+    z-index: 1;
       }
       
       @keyframes noise-anim {
@@ -126,7 +126,7 @@
         text-shadow: -1px 0 red;
         top: 0;
         color: white;
-        background: black;
+        /*background: black;*/
         overflow: hidden;
         clip: rect(0, 900px, 0, 0);
         animation: noise-anim 2s infinite linear alternate-reverse;
@@ -204,7 +204,7 @@
         text-shadow: 1px 0 blue;
         top: 0;
         color: white;
-        background: black;
+        /*background: black;*/
         overflow: hidden;
         clip: rect(0, 900px, 0, 0);
         animation: noise-anim-2 3s infinite linear alternate-reverse;
@@ -730,7 +730,7 @@
    * star generator
    * ---------------------------------------
   */
- .stars-cluster-1 .star-1 {
+  .stars-cluster-1 .star-1 {
     width: 2px;
     height: 2px;
     opacity: 0.31924486;
