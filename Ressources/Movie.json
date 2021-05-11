@@ -1,0 +1,299 @@
+[
+    {
+        "id": 1,
+        "title": "Captain America : First Avenger",
+        "date": "2011",
+        "author": "Joe Johnston",
+        "image": "images/1-marvel.jpg",
+        "user": 1,
+        "category": "marvel"
+    },
+    {
+        "id": 2,
+        "title": "Captain Marvel",
+        "date": "2019",
+        "author": "Anna Boden",
+        "image": "images/2-marvel.jpg",
+        "user": 1,
+        "category": "marvel"
+    },
+    {
+        "id": 3,
+        "title": "Iron Man",
+        "date": "2011",
+        "author": "Jon Favreau",
+        "image": "images/3-marvel.jpg",
+        "user": 2,
+        "category": "marvel"
+    },
+    {
+        "id": 4,
+        "title": "Thor",
+        "date": "2011",
+        "author": "Kenneth Branagh",
+        "image": "images/4-marvel.jpg",
+        "user": 2,
+        "category": "marvel"
+    },
+    {
+        "id": 5,
+        "title": "L'Incroyable Hulk",
+        "date": "2008",
+        "author": "Louis Leterrier",
+        "image": "images/5-marvel.jpg",
+        "user": 2,
+        "category": "marvel"
+    },
+    {
+        "id": 6,
+        "title": "Captain Marvel",
+        "date": "2019",
+        "author": "Anna Boden",
+        "image": "images/6-marvel.jpg",
+        "user": 2,
+        "category": "marvel"
+    },
+    {
+        "id": 7,
+        "title": "Avengers",
+        "date": "2012",
+        "author": "Joss Whedon",
+        "image": "images/7-marvel.jpg",
+        "user": 2,
+        "category": "marvel"
+    },
+    {
+        "id": 8,
+        "title": "Iron Man 3",
+        "date": "2013",
+        "author": "Shane Black",
+        "image": "images/8-marvel.jpg",
+        "user": 1,
+        "category": "marvel"
+    },
+    {
+        "id": 9,
+        "title": "Thor : Le Monde des ténèbres",
+        "date": "2013",
+        "author": "Alan Taylor",
+        "image": "images/9-marvel.jpg",
+        "user": 2,
+        "category": "marvel"
+    },
+    {
+        "id": 10,
+        "title": "Captain America, le soldat de l'hiver",
+        "date": "2014",
+        "author": "Joe et Anthony Russo",
+        "image": "images/10-marvel.jpg",
+        "user": 2,
+        "category": "marvel"
+    },
+    {
+        "id": 11,
+        "title": "Les Gardiens de la Galaxie",
+        "date": "2013",
+        "author": "James Gunn",
+        "image": "images/11-marvel.jpg",
+        "user": 3,
+        "category": "marvel"
+    },
+    {
+        "id": 12,
+        "title": "Avengers : l'ère d'Ultron",
+        "date": "2015",
+        "author": "Joss Whedon et Joss Wheddon",
+        "image": "images/12-marvel.jpg",
+        "user": 1,
+        "category": "marvel"
+    },
+    {
+        "id": 13,
+        "title": "Ant-Man",
+        "date": "2015",
+        "author": "Peyton Reed",
+        "image": "images/13-marvel.jpg",
+        "user": 1,
+        "category": "marvel"
+    },
+    {
+        "id": 14,
+        "title": "Captain America : Civil War",
+        "date": "2016",
+        "author": "Anthony et Joe Russo",
+        "image": "images/14-marvel.jpg",
+        "user": 2,
+        "category": "marvel"
+    },
+    {
+        "id": 15,
+        "title": "Black Panther",
+        "date": "2018",
+        "author": "Ryan Coogler",
+        "image": "images/15-marvel.jpg",
+        "user": 2,
+        "category": "marvel"
+    },
+    {
+        "id": 16,
+        "title": "Spider-Man : Homecoming",
+        "date": "2017",
+        "author": "Jon Watts",
+        "image": "images/16-marvel.jpg",
+        "user": 2,
+        "category": "marvel"
+    },
+    {
+        "id": 17,
+        "title": "Les Gardiens de la Galaxie 2",
+        "date": "2017",
+        "author": "James Gunn",
+        "image": "images/17-marvel.jpg",
+        "user": 2,
+        "category": "marvel"
+    },
+    {
+        "id": 18,
+        "title": "Doctor Strange",
+        "date": "2016",
+        "author": "Scott Derrickson",
+        "image": "images/18-marvel.jpg",
+        "user": 2,
+        "category": "marvel"
+    },
+    {
+        "id": 19,
+        "title": "Thor : Ragnarok",
+        "date": "2017",
+        "author": "Taika Waititi",
+        "image": "images/19-marvel.jpg",
+        "user": 1,
+        "category": "marvel"
+    },
+    {
+        "id": 20,
+        "title": "Spider-Man : Far From Home",
+        "date": "2019",
+        "author": "Jon Watts",
+        "image": "images/23-marvel.jpg",
+        "user": 1,
+        "category": "marvel"
+    },
+    {
+        "id": 21,
+        "title": "Avengers : Infinity War",
+        "date": "2018",
+        "author": "Anthony et Joe Russo",
+        "image": "images/20-marvel.jpg",
+        "user": 1,
+        "category": "marvel"
+    },
+    {
+        "id": 22,
+        "title": "Ant-Man et la guêpe",
+        "date": "2018",
+        "author": "Peyton Reed",
+        "image": "images/21-marvel.jpg",
+        "user": 1,
+        "category": "marvel"
+    },
+    {
+        "id": 23,
+        "title": "Avengers : Endgame",
+        "date": "2019",
+        "author": "Anthony et Joe Russo",
+        "image": "images/22-marvel.jpg",
+        "user": 1,
+        "category": "marvel"
+    },
+    {
+        "id": 101,
+        "title": "Wonder Woman",
+        "date": "2017",
+        "author": "Patty Jenkins",
+        "image": "images/dc-1.jpeg",
+        "user": 1,
+        "category": "dc"
+    },
+    {
+        "id": 102,
+        "title": "Wonder Woman 1984",
+        "date": "2020",
+        "author": "Patty Jenkins",
+        "image": "images/dc-2.jpg",
+        "user": 1,
+        "category": "dc"
+    },
+    {
+        "id": 103,
+        "title": "Man of Steel",
+        "date": "2013",
+        "author": "Zack Snyder",
+        "image": "images/dc-3.jpg",
+        "user": 2,
+        "category": "dc"
+    },
+    {
+        "id": 104,
+        "title": "Batman v Superman: L’aube de la justice",
+        "date": "2016",
+        "author": "Zack Snyder",
+        "image": "images/dc-4.jpg",
+        "user": 1,
+        "category": "dc"
+    },
+    {
+        "id": 105,
+        "title": "Suicide Squad",
+        "date": "2016",
+        "author": "David Ayer",
+        "image": "images/dc-5.jpg",
+        "user": 2,
+        "category": "dc"
+    },
+    {
+        "id": 106,
+        "title": "Justice League",
+        "date": "2017",
+        "author": "Zack Snyder",
+        "image": "images/dc-6.jpg",
+        "user": 1,
+        "category": "dc"
+    },
+    {
+        "id": 107,
+        "title": "Justice League Version HBO Max",
+        "date": "2021",
+        "author": "Zack Snyder",
+        "image": "images/dc-7.jpg",
+        "user": 1,
+        "category": "dc"
+    },
+    {
+        "id": 108,
+        "title": "Aquaman",
+        "date": "2018",
+        "author": "James Wan",
+        "image": "images/dc-8.jpg",
+        "user": 2,
+        "category": "dc"
+    },
+    {
+        "id": 109,
+        "title": "Shazam!",
+        "date": "2019",
+        "author": "David F. Sandberg",
+        "image": "images/dc-9.jpg",
+        "user": 2,
+        "category": "dc"
+    },
+    {
+        "id": 110,
+        "title": "Birds of Prey et la fantabuleuse histoire de Harley Quinn",
+        "date": "2020",
+        "author": "Cathy Yan",
+        "image": "images/dc-10.jpg",
+        "user": 1,
+        "category": "dc"
+    }
+]
