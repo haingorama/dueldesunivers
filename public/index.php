@@ -1,8 +1,8 @@
 <?php
 
 use ludk\Persistence\ORM;
-use Entity\Movie;
-use Entity\User;
+use Entity\Movie; //utilise le bdd movie
+use Entity\User; // idem user
 
 require __DIR__ . "/../vendor/autoload.php"; // redirige vers autoload.php
 
@@ -10,8 +10,8 @@ $orm = new ORM(__DIR__ . '/../Ressources');
 
 $movieRepo = $orm->getRepository(Movie::class); //on reprend le tableau 
 
-$ItemsDc = $movieRepo->findBy(array("category" => "dc")); //on choisie la catégorie
-$ItemsMarvel = $movieRepo->findBy(array("category" => "marvel")); //idem
+$ItemsDc = $movieRepo->findBy(array("category" => "dc")); //on choisie la catégorie dc
+$ItemsMarvel = $movieRepo->findBy(array("category" => "marvel")); //idem marvel
 
 ?>
 
@@ -30,8 +30,8 @@ $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel")); //idem
 </head>
 
 <body>
-
-    <header class="container">
+    <div id="ancre"></div>
+    <header>
         <!-- Etoiles -->
         <div class="stars-wrapper" id="scene">
             <div class="layer" data-depth="0.00"></div>
@@ -196,9 +196,30 @@ $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel")); //idem
         </div>
     </header>
 
-    <main>
+    <aside>
+        <div class="light-box">
+            <nav>
+                <ul>
+                    <li><a href="#marvel-films">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Marvel films</a></li>
+                    <li><a href="#dc-films">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            DC films</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <main class="container">
         <div class="films">
-            <section class="marvel-films">
+            <section class="marvel-films" id="marvel-films">
                 <h2>Marvel Universe</h2>
                 <p>Par ordre de viosionnage</p>
                 <?php
@@ -218,7 +239,7 @@ $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel")); //idem
                 ?>
             </section>
 
-            <section class="dc-films">
+            <section class="dc-films" id="dc-films">
                 <h2>DC Universe</h2>
                 <p>Liste officielle de la DC Extended Universe par ordre de viosionnage</p>
                 <?php
@@ -277,6 +298,9 @@ $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel")); //idem
             </section>
         </div>
     </main>
+
+    <!-- Ancre -->
+    <div class="ancre"><a href="#ancre"><img src="images/up.png" alt="ancre haut"></a></div>
 
     <footer>
         <p>Haingo Ramaroson</p>
