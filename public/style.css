@@ -103,7 +103,7 @@ nav li {
   padding: 6px 0;
 }
 
-.light-box a:hover, .ancre a  {
+.light-box a:hover, .ancre a {
   background: #fff;
   color: #000011;
   font-weight: 900;
@@ -826,6 +826,25 @@ text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px r
   top: 20%;
   bottom: 40%;
 }
+.badge-order {
+  font-size: 2rem;
+  background-color: #fc1946;
+  padding: 5px;
+  width: 50px;
+  color: white;
+  height: 50px;
+  border-radius: 50%;
+  /*box-shadow:0 0 5px #03e9f4, 0 0 25px #03e9f4,  0 0 50px #03e9f4, 0 0 100px #03e9f4;*/
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: relative;
+  left: 5%;
+  bottom: 21px;
+  z-index: 2;
+}
+
 .stars-cluster.stars-cluster-1 .star-7,
 .stars-cluster.stars-cluster-1 .star-22,
 .stars-cluster.stars-cluster-1 .star-30 {

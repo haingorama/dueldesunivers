@@ -8,6 +8,7 @@ use ludk\Utils\Serializer;
 class Movie
 {
     public $id;
+    public $viewOrder;
     public $title;
     public $author;
     public $date;

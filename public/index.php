@@ -219,6 +219,7 @@ $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel")); //idem marvel
 
     <main class="container">
         <div class="films">
+
             <section class="marvel-films" id="marvel-films">
                 <h2>Marvel Universe</h2>
                 <p>Par ordre de viosionnage</p>
@@ -228,6 +229,7 @@ $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel")); //idem marvel
                     <div class="flip flip-vertical">
                         <div class="front" style="background-image: url(<?= $onemovie->image ?>)">
                         </div>
+                        <div class="badge-order"><?= $onemovie->viewOrder ?></div>
                         <div class="back">
                             <h1 class="text-shadow"><?= $onemovie->title ?></h1>
                             <h2>de <?= $onemovie->author ?></h2>
@@ -248,6 +250,7 @@ $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel")); //idem marvel
                     <div class="flip flip-vertical">
                         <div class="front" style="background-image: url(<?= $onemovie->image ?>)">
                         </div>
+                        <div class="badge-order"><?= $onemovie->viewOrder ?></div>
                         <div class="back">
                             <h1 class="text-shadow"><?= $onemovie->title ?></h1>
                             <h2>de <?= $onemovie->author ?></h2>
