@@ -4,14 +4,26 @@ use ludk\Persistence\ORM;
 use Entity\Movie; //utilise le bdd movie
 use Entity\User; // idem user
 
-require __DIR__ . "/../vendor/autoload.php"; // redirige vers autoload.php
+require __DIR__ . "/../vendor/autoload.php"; // j'inclue redirige vers autoload.php
+
+session_start(); //va utiliser la session
 
 $orm = new ORM(__DIR__ . '/../Ressources');
+$movieRepo = $orm->getRepository(Movie::class); //on reprend-récupère le tableau, l'entité
+//userRepo =$orm->getepository(User::class), //si on veut récup l'entité user
 
-$movieRepo = $orm->getRepository(Movie::class); //on reprend le tableau 
+// $items = $codeRepo->findall(); // récup tout de l'entité au dessus en requette (select * from ...) 
 
-$ItemsDc = $movieRepo->findBy(array("category" => "dc")); //on choisie la catégorie dc
-$ItemsMarvel = $movieRepo->findBy(array("category" => "marvel")); //idem marvel
+$ItemsDc = [];
+$ItemsMarvel = [];
+if (isset($_GET["search"])) {
+    $ItemsDc = $movieRepo->findBy(array("category" => "dc", "title" => '%' . $_GET["search"] . '%')); //on choisie la catégorie dc
+    $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel", "title" => '%' . $_GET["search"] . '%')); //idem marvel
+} else {
+    $ItemsDc = $movieRepo->findBy(array("category" => "dc")); //on choisie la catégorie dc
+    $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel")); //idem marvel
+
+}
 
 ?>
 
@@ -213,7 +225,13 @@ $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel")); //idem marvel
                             <span></span>
                             DC films</a></li>
                 </ul>
+                <ul>
+                    <form action="/">
+                        <input type="search" id="search" name="search" placeholder="Search">
+                    </form>
+                </ul>
             </nav>
+
         </div>
     </aside>
 
