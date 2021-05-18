@@ -73,11 +73,24 @@ footer> p {
 nav {
   position: fixed;
   width: 20%;
-  left: 0;
+  left: -35px;
   top: 5%;
 }
 nav li {
   list-style: none;
+}
+li form{
+  margin-top: 40px;
+}
+form #search {
+  margin-top: 40px;
+  height: 20px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px #03e9f4,  0 0 25px #03e9f4,  0 0 50px #03e9f4,  0 0 100px #03e9f4;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 
 .light-box  {
@@ -103,7 +116,7 @@ nav li {
   padding: 6px 0;
 }
 
-.light-box a:hover, .ancre a {
+.light-box a:hover, .ancre a{
   background: #fff;
   color: #000011;
   font-weight: 900;
@@ -157,7 +170,7 @@ nav li {
 }
 
 .light-box a span:nth-child(3) {
-  bottom: 6px;
+  bottom: 11px;
   right: -100%;
   width: 80%;
   height: 2px;
@@ -845,6 +858,7 @@ text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px r
   z-index: 2;
 }
 
+/* Etoiles */
 .stars-cluster.stars-cluster-1 .star-7,
 .stars-cluster.stars-cluster-1 .star-22,
 .stars-cluster.stars-cluster-1 .star-30 {
