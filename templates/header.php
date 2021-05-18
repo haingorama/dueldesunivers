@@ -123,59 +123,6 @@
             <h1 class="glitch" data-text="Le duel des univers">Le duel des univers</h1>
             <h2>Quel est le meilleur !</h2>
 
-            <!--MARVEL-->
-            <div class="choose">
-                <div class="versus">
-                    <div class="card" data-effect="zoom">
-                        <button class="card__save  js-save" type="button">
-                            <i class="fa  fa-bookmark"></i>
-                        </button>
-                        <figure class="card__image">
-                            <img src="images/marvel-avengers.jpg" alt="Short description">
-                        </figure>
-                        <div class="card__header">
-                            <figure class="card__profile">
-                                <img src="images/marvel-profile.gif" alt="Short description">
-                            </figure>
-                        </div>
-                        <div class="card__body">
-                            <h3 class="card__name">Marvel</h3>
-                            <p class="card__job">astronaut & engineer</p>
-                            <p class="card__bio"></p>
-                        </div>
-                        <div class="card__footer">
-                            <p class="card__date"></p>
-                            <p class=""></p>
-                        </div>
-                    </div>
-                </div>
-                <img class="versus-img" src="images/Combat-Versus4.png" alt="image versus">
-                <!--DC -->
-                <div class="versus">
-                    <div class="card" data-effect="zoom">
-                        <button class="card__save  js-save" type="button">
-                            <i class="fa  fa-bookmark"></i>
-                        </button>
-                        <figure class="card__image">
-                            <img src="images/dcbg-jl.jpg" alt="Short description">
-                        </figure>
-                        <div class="card__header">
-                            <figure class="card__profile">
-                                <img src="images/dc-profile.gif" alt="Short description">
-                            </figure>
-                        </div>
-                        <div class="card__body">
-                            <h3 class="card__name">DC</h3>
-                            <p class="card__job">astronaut & engineer</p>
-                            <p class="card__bio"></p>
-                        </div>
-                        <div class="card__footer">
-                            <p class="card__date"></p>
-                            <p class=""></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </header>
 

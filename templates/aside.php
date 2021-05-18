@@ -3,10 +3,11 @@
         <nav>
             <ul>
                 <li>
-
                     <?php
                     if (isset($_SESSION['user'])) {
-                    ?> <a href="?action=logout" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="logout-btn">Logout</a>
+                    ?>
+                        <p class="login"><?= $_SESSION['user']->nickname ?></p>
+                        <a href="?action=logout" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="logout-btn">Log out</a>
                     <?php
                     } else {
                     ?>
@@ -15,7 +16,6 @@
                     <?php
                     }
                     ?>
-
                 </li>
                 <li><a href="#marvel-films">
                         <span></span>
@@ -30,9 +30,18 @@
                         <span></span>
                         DC films</a></li>
                 <li>
-                    <form action="/">
-                        <input type="search" id="search" name="search" placeholder=" Rechercher">
-                    </form>
+                    <?php
+                    if (isset($_SESSION['user'])) { //button s'affiche que quand on est connecté
+                    ?>
+                        <a href="?action=new" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="logout-btn">Add movie</a>
+                    <?php
+                    }
+                    ?>
+                </li>
+                <form action="/">
+                    <input type="search" id="search" name="search" placeholder=" Rechercher">
+                    <span></span>
+                </form>
                 </li>
             </ul>
         </nav>

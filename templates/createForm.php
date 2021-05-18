@@ -1,10 +1,3 @@
-<?php
-include __DIR__ . "/header.php";
-?>
-<?php
-include __DIR__ . "/aside.php";
-?>
-
 <div class="container">
     <div class="row">
         <div class="col">
@@ -25,17 +18,23 @@ include __DIR__ . "/aside.php";
                     echo "<div class='alert alert-warning' role='alert'>$errorMsg</div>";
                 }
                 ?>
-                <input type="text" class="form-control" name="username" placeholder="Nickname (4 characters)" required="" autofocus="" />
-                <input type="password" class="form-control" name="password" placeholder="Password (8 characters)" required="" />
-                <label>Retype password:</label>
-                <input type="password" class="form-control" name="passwordRetype" placeholder="Password" required="" />
+                <input type="text" class="form-control" name="title" placeholder="Title (>= 2 character)" required="" autofocus="" />
+                <input type="text" class="form-control" name="author" placeholder="Author (>= 4 characters)" required="" autofocus="" />
+                <input type="text" class="form-control" name="date" placeholder="date (4 characters)" required="" autofocus="" />
+
+                <select class="form-control" name="languageId" id="languageId">
+                    <option value="Dc">
+                        <?php
+                        foreach ($variable as $key => $value) {
+                            # code...
+                        }
+                        ?>
+                        /option>
+                    <option value="Marvel"></option>
+                </select>
+
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
             </form>
         </div>
     </div>
 </div>
-</body>
-
-<?php
-include __DIR__ . "/footer.php";
-?>

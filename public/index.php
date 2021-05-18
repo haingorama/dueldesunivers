@@ -18,7 +18,6 @@ $userRepo = $orm->getRepository(User::class);
 $action = $_GET["action"] ?? "display";
 switch ($action) {
     case 'register':
-        // include "../Ressources/User.json";
         if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['passwordRetype'])) {
             $usersWithThisUsername = $userRepo->findBy(["nickname" => $_POST["username"]]);
             if (count($usersWithThisUsername) > 0) {
@@ -26,7 +25,7 @@ switch ($action) {
             } else if ($_POST['password'] != $_POST['passwordRetype']) {
                 $errorMsg = "Passwords are not the same.";
             } else if (strlen(trim($_POST['password'])) < 4) {
-                $errorMsg = "Your password should have at least 8 characters.";
+                $errorMsg = "Your password should have at least 4 characters.";
             } else if (strlen(trim($_POST['username'])) < 4) {
                 $errorMsg = "Your nickame should have at least 4 characters.";
             }
@@ -70,6 +69,39 @@ switch ($action) {
         }
         break;
     case 'new':
+
+        if (
+            isset($_SESSION) //personne qui crée voir si elle est connectée
+            && isset($_POST['title'])
+            && isset($_POST['author'])
+            && isset($_POST['date'])
+        ) {
+            $usersWithThisUsername = $userRepo->findBy(["nickname" => $_POST["username"]]);
+            /*if (count($usersWithThisUsername) > 0) {
+                $errorMsg = "Nickname already used.";
+            } else if ($_POST['password'] != $_POST['passwordRetype']) {
+                $errorMsg = "Passwords are not the same.";
+            } else if (strlen(trim($_POST['password'])) < 4) {
+                $errorMsg = "Your password should have at least 4 characters.";
+            } else if (strlen(trim($_POST['username'])) < 4) {
+                $errorMsg = "Your nickame should have at least 4 characters.";
+            }*/
+            if ($errorMsg) {
+                include "../templates/createForm.php";
+            } else {
+                /*
+                $newUser = new User();
+                $newUser->nickname = $_POST['username'];
+                $newUser->password = $_POST['password'];
+                $manager->persist($newUser);
+                $manager->flush();
+                $_SESSION['user'] = $newUser;
+                */
+                header('Location: ?action=display');
+            }
+        } else {
+            include "../templates/createForm.php";
+        }
         break;
     case 'display':
     default: // cette vue utilise les actions d'afficher les ajouts de films DC ou Marvel

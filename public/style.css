@@ -86,13 +86,15 @@ form #search {
   margin-top: 40px;
   height: 20px;
   border-radius: 3px;
-  box-shadow: 0 0 5px #03e9f4,  0 0 25px #03e9f4,  0 0 50px #03e9f4,  0 0 100px #03e9f4;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  background-color: transparent;
+  color: #03e9f4;
+  border: solid 2px #03e9f4;
+  padding: 10px 0;
 }
-
+.add-movie {
+  margin-top: 40px;;
+  padding: 10px;
+}
 .light-box  {
   top: 0px;
   left: 0;
@@ -116,7 +118,7 @@ form #search {
   padding: 6px 0;
 }
 
-.light-box a:hover, .ancre a{
+.light-box a:hover, .ancre a {
   background: #fff;
   color: #000011;
   font-weight: 900;
