@@ -17,18 +17,6 @@ $movieRepo = $orm->getRepository(Movie::class); //on reprend-récupère le table
 
 // $items = $codeRepo->findall(); // récup tout de l'entité au dessus en requette (select * from ...) 
 
-$ItemsDc = [];
-$ItemsMarvel = [];
-if (isset($_GET["search"])) {
-    $ItemsDc = $movieRepo->findBy(array("category" => "dc", "title" => '%' . $_GET["search"] . '%')); //on choisie la catégorie dc
-    $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel", "title" => '%' . $_GET["search"] . '%')); //idem marvel
-} else {
-    $ItemsDc = $movieRepo->findBy(array("category" => "dc")); //on choisie la catégorie dc
-    $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel")); //idem marvel
-
-}
-
-include "../templates/display.php";
 
 $action = $_GET["action"] ?? "display";
 switch ($action) {
@@ -42,5 +30,17 @@ switch ($action) {
         break;
     case 'display':
     default:
+        $ItemsDc = [];
+        $ItemsMarvel = [];
+        if (isset($_GET["search"])) {
+            $ItemsDc = $movieRepo->findBy(array("category" => "dc", "title" => '%' . $_GET["search"] . '%')); //on choisie la catégorie dc
+            $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel", "title" => '%' . $_GET["search"] . '%')); //idem marvel
+        } else {
+            $ItemsDc = $movieRepo->findBy(array("category" => "dc")); //on choisie la catégorie dc
+            $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel")); //idem marvel
+        }
+
+        include "../templates/display.php";
+
         break;
 }
