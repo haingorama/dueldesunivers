@@ -18,14 +18,14 @@ $userRepo = $orm->getRepository(User::class);
 $action = $_GET["action"] ?? "display";
 switch ($action) {
     case 'register':
-        include "../Ressources/User.json";
+        // include "../Ressources/User.json";
         if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['passwordRetype'])) {
             $usersWithThisUsername = $userRepo->findBy(["nickname" => $_POST["username"]]);
             if (count($usersWithThisUsername) > 0) {
                 $errorMsg = "Nickname already used.";
             } else if ($_POST['password'] != $_POST['passwordRetype']) {
                 $errorMsg = "Passwords are not the same.";
-            } else if (strlen(trim($_POST['password'])) < 8) {
+            } else if (strlen(trim($_POST['password'])) < 4) {
                 $errorMsg = "Your password should have at least 8 characters.";
             } else if (strlen(trim($_POST['username'])) < 4) {
                 $errorMsg = "Your nickame should have at least 4 characters.";
