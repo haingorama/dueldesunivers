@@ -121,7 +121,6 @@
             </div>
 
             <h1 class="glitch" data-text="Le duel des univers">Le duel des univers</h1>
-            <h2>Quel est le meilleur !</h2>
 
         </div>
     </header>

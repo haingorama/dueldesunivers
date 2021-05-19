@@ -3,6 +3,8 @@
 include __DIR__ . "/header.php";
 ?>
 
+<h2>Quel est le meilleur !</h2>
+
 <!--MARVEL-->
 <section>
     <div class="choose">

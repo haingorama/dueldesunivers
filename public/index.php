@@ -70,37 +70,49 @@ switch ($action) {
         break;
     case 'new':
 
+        $movie = $movieRepo->findAll();
         if (
-            isset($_SESSION) //personne qui crée voir si elle est connectée
+            isset($_SESSION['user']) //la personne est connectée
             && isset($_POST['title'])
             && isset($_POST['author'])
             && isset($_POST['date'])
+            && isset($_POST['viewOrder'])
+            && isset($_POST['image'])
+            && isset($_POST['category'])
+            && isset($_POST['movieId'])
         ) {
-            $usersWithThisUsername = $userRepo->findBy(["nickname" => $_POST["username"]]);
-            /*if (count($usersWithThisUsername) > 0) {
-                $errorMsg = "Nickname already used.";
-            } else if ($_POST['password'] != $_POST['passwordRetype']) {
-                $errorMsg = "Passwords are not the same.";
-            } else if (strlen(trim($_POST['password'])) < 4) {
-                $errorMsg = "Your password should have at least 4 characters.";
-            } else if (strlen(trim($_POST['username'])) < 4) {
-                $errorMsg = "Your nickame should have at least 4 characters.";
-            }*/
+            $errorMsg = NULL;
+            if (strlen(trim($_POST['title'])) < 2) {
+                $errorMsg = "Your title should have at least 2 characters.";
+            } else if (strlen(trim($_POST['author'])) < 2) {
+                $errorMsg = "Your author should have at least 2 characters.";
+            } else if (strlen(trim($_POST['date'])) == 0) {
+                $errorMsg = "Your content shouldn't be empty.";
+            } else if (intval($_POST['category']) == 0) {
+                $errorMsg = "You should choose an universe.";
+            } else if (intval($_POST['image']) == 0) {
+                $errorMsg = "You should choose an image.";
+            } else if (intval($_POST['viewOrder']) == 0) {
+                $errorMsg = "You should tell the order of view.";
+            }
             if ($errorMsg) {
-                include "../templates/createForm.php";
+                include "../templates/CreateForm.php";
             } else {
-                /*
-                $newUser = new User();
-                $newUser->nickname = $_POST['username'];
-                $newUser->password = $_POST['password'];
-                $manager->persist($newUser);
+                $movie = $movieRepo->find($_POST['movieId']);
+                $newMovie = new Movie();
+                $newMovie->title = trim($_POST['title']);
+                $newMovie->author = trim($_POST['author']);
+                $newMovie->order = trim($_POST['viewOrder']);
+                $newMovie->created_at = date("Y");
+                $newMovie->image = trim($_POST['image']);
+                $newMovie->category = trim($_POST['category']);
+                $newMovie->user = $_SESSION['user'];
+                $manager->persist($newMovie);
                 $manager->flush();
-                $_SESSION['user'] = $newUser;
-                */
                 header('Location: ?action=display');
             }
         } else {
-            include "../templates/createForm.php";
+            include "../templates/CreateForm.php";
         }
         break;
     case 'display':
@@ -108,11 +120,11 @@ switch ($action) {
         $ItemsDc = [];
         $ItemsMarvel = [];
         if (isset($_GET["search"])) {
-            $ItemsDc = $movieRepo->findBy(array("category" => "dc", "title" => '%' . $_GET["search"] . '%')); //on choisie la catégorie dc
-            $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel", "title" => '%' . $_GET["search"] . '%')); //idem marvel
+            $ItemsDc = $movieRepo->findBy(array("category" => "dc", "title" => '%' . $_GET["search"] . '%'));
+            $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel", "title" => '%' . $_GET["search"] . '%'));
         } else {
-            $ItemsDc = $movieRepo->findBy(array("category" => "dc")); //on choisie la catégorie dc
-            $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel")); //idem marvel
+            $ItemsDc = $movieRepo->findBy(array("category" => "dc"));
+            $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel"));
         }
 
         include "../templates/display.php"; //vue html qui se trouve dans display
