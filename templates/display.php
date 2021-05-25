@@ -88,8 +88,6 @@ include __DIR__ . "/header.php";
             <?php
             }
             ?>
-            <!-- Ajoute la nouvelle cards marvel ici // à voir -->
-            <!-- <?= strtoupper($onemovie->Categoty->universe) ?> -->
 
         </section>
 
@@ -112,8 +110,6 @@ include __DIR__ . "/header.php";
             <?php
             }
             ?>
-            <!-- Ajoute la nouvelle cards dc ici // à voir-->
-            <!-- <?= strtoupper($onemovie->Categoty->universe) ?> -->
 
             <h3>Tous les films par ordre de visionnage</h3>
             <ol>

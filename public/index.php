@@ -4,6 +4,7 @@ use Entity\Movie;
 use Entity\User;
 use Entity\Category;
 use ludk\Persistence\ORM;
+use Controller\HomeController;
 
 require __DIR__ . "/../vendor/autoload.php";
 
@@ -116,18 +117,8 @@ switch ($action) {
         }
         break;
     case 'display':
-    default: // cette vue utilise les actions d'afficher les ajouts de films DC ou Marvel
-        $ItemsDc = [];
-        $ItemsMarvel = [];
-        if (isset($_GET["search"])) {
-            $ItemsDc = $movieRepo->findBy(array("category" => "1", "title" => '%' . $_GET["search"] . '%'));
-            $ItemsMarvel = $movieRepo->findBy(array("category" => "2", "title" => '%' . $_GET["search"] . '%'));
-        } else {
-            $ItemsDc = $movieRepo->findBy(array("category" => "1"));
-            $ItemsMarvel = $movieRepo->findBy(array("category" => "2"));
-        }
-
-        include "../templates/display.php";
-
+    default:
+        $controller = new HomeController();
+        $controller->display();
         break;
 }
