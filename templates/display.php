@@ -5,9 +5,10 @@ include __DIR__ . "/header.php";
 
 <h2>Quel est le meilleur !</h2>
 
-<!--MARVEL-->
 <section>
+    <!-- Les 2 cards du header -->
     <div class="choose">
+        <!--MARVEL-->
         <div class="versus">
             <div class="card" data-effect="zoom">
                 <button class="card__save  js-save" type="button">
@@ -32,7 +33,7 @@ include __DIR__ . "/header.php";
                 </div>
             </div>
         </div>
-        <img class="versus-img" src="images/Combat-Versus4.png" alt="image versus"> -->
+        <img class="versus-img" src="images/Combat-Versus4.png" alt="image versus">
         <!--DC -->
         <div class="versus">
             <div class="card" data-effect="zoom">
@@ -61,6 +62,10 @@ include __DIR__ . "/header.php";
     </div>
 </section>
 
+<!-- Fin du bg étoiles -->
+</div>
+</header>
+
 <main class="container">
     <div class="films">
 
@@ -83,6 +88,9 @@ include __DIR__ . "/header.php";
             <?php
             }
             ?>
+            <!-- Ajoute la nouvelle cards marvel ici // à voir -->
+            <!-- <?= strtoupper($onemovie->Categoty->universe) ?> -->
+
         </section>
 
         <section class="dc-films" id="dc-films">
@@ -104,6 +112,8 @@ include __DIR__ . "/header.php";
             <?php
             }
             ?>
+            <!-- Ajoute la nouvelle cards dc ici // à voir-->
+            <!-- <?= strtoupper($onemovie->Categoty->universe) ?> -->
 
             <h3>Tous les films par ordre de visionnage</h3>
             <ol>

@@ -7,7 +7,7 @@
         "author": "Joe Johnston",
         "image": "images/1-marvel.jpg",
         "user": 1,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 2,
@@ -17,7 +17,7 @@
         "author": "Anna Boden",
         "image": "images/2-marvel.jpg",
         "user": 1,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 3,
@@ -27,7 +27,7 @@
         "author": "Jon Favreau",
         "image": "images/3-marvel.jpg",
         "user": 2,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 4,
@@ -37,7 +37,7 @@
         "author": "Kenneth Branagh",
         "image": "images/4-marvel.jpg",
         "user": 2,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 5,
@@ -47,7 +47,7 @@
         "author": "Louis Leterrier",
         "image": "images/5-marvel.jpg",
         "user": 2,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 6,
@@ -57,7 +57,7 @@
         "author": "Anna Boden",
         "image": "images/6-marvel.jpg",
         "user": 2,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 7,
@@ -67,7 +67,7 @@
         "author": "Joss Whedon",
         "image": "images/7-marvel.jpg",
         "user": 2,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 8,
@@ -77,7 +77,7 @@
         "author": "Shane Black",
         "image": "images/8-marvel.jpg",
         "user": 1,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 9,
@@ -87,7 +87,7 @@
         "author": "Alan Taylor",
         "image": "images/9-marvel.jpg",
         "user": 2,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 10,
@@ -97,7 +97,7 @@
         "author": "Joe et Anthony Russo",
         "image": "images/10-marvel.jpg",
         "user": 2,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 11,
@@ -107,7 +107,7 @@
         "author": "James Gunn",
         "image": "images/11-marvel.jpg",
         "user": 3,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 12,
@@ -117,7 +117,7 @@
         "author": "Joss Whedon et Joss Wheddon",
         "image": "images/12-marvel.jpg",
         "user": 1,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 13,
@@ -127,7 +127,7 @@
         "author": "Peyton Reed",
         "image": "images/13-marvel.jpg",
         "user": 1,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 14,
@@ -137,7 +137,7 @@
         "author": "Anthony et Joe Russo",
         "image": "images/14-marvel.jpg",
         "user": 2,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 15,
@@ -147,7 +147,7 @@
         "author": "Ryan Coogler",
         "image": "images/15-marvel.jpg",
         "user": 2,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 16,
@@ -157,7 +157,7 @@
         "author": "Jon Watts",
         "image": "images/16-marvel.jpg",
         "user": 2,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 17,
@@ -167,7 +167,7 @@
         "author": "James Gunn",
         "image": "images/17-marvel.jpg",
         "user": 2,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 18,
@@ -177,7 +177,7 @@
         "author": "Scott Derrickson",
         "image": "images/18-marvel.jpg",
         "user": 2,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 19,
@@ -187,7 +187,7 @@
         "author": "Taika Waititi",
         "image": "images/19-marvel.jpg",
         "user": 1,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 20,
@@ -197,7 +197,7 @@
         "author": "Jon Watts",
         "image": "images/23-marvel.jpg",
         "user": 1,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 21,
@@ -207,7 +207,7 @@
         "author": "Anthony et Joe Russo",
         "image": "images/20-marvel.jpg",
         "user": 1,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 22,
@@ -217,7 +217,7 @@
         "author": "Peyton Reed",
         "image": "images/21-marvel.jpg",
         "user": 1,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 23,
@@ -227,7 +227,7 @@
         "author": "Anthony et Joe Russo",
         "image": "images/22-marvel.jpg",
         "user": 1,
-        "category": "marvel"
+        "category": "1"
     },
     {
         "id": 101,
@@ -237,7 +237,7 @@
         "author": "Patty Jenkins",
         "image": "images/dc-1.jpeg",
         "user": 1,
-        "category": "dc"
+        "category": "2"
     },
     {
         "id": 102,
@@ -247,7 +247,7 @@
         "author": "Patty Jenkins",
         "image": "images/dc-2.jpg",
         "user": 1,
-        "category": "dc"
+        "category": "2"
     },
     {
         "id": 103,
@@ -257,7 +257,7 @@
         "author": "Zack Snyder",
         "image": "images/dc-3.jpg",
         "user": 2,
-        "category": "dc"
+        "category": "2"
     },
     {
         "id": 104,
@@ -267,7 +267,7 @@
         "author": "Zack Snyder",
         "image": "images/dc-4.jpg",
         "user": 1,
-        "category": "dc"
+        "category": "2"
     },
     {
         "id": 105,
@@ -277,7 +277,7 @@
         "author": "David Ayer",
         "image": "images/dc-5.jpg",
         "user": 2,
-        "category": "dc"
+        "category": "2"
     },
     {
         "id": 106,
@@ -287,7 +287,7 @@
         "author": "Zack Snyder",
         "image": "images/dc-6.jpg",
         "user": 1,
-        "category": "dc"
+        "category": "2"
     },
     {
         "id": 107,
@@ -297,7 +297,7 @@
         "author": "Zack Snyder",
         "image": "images/dc-7.jpg",
         "user": 1,
-        "category": "dc"
+        "category": "2"
     },
     {
         "id": 108,
@@ -307,7 +307,7 @@
         "author": "James Wan",
         "image": "images/dc-8.jpg",
         "user": 2,
-        "category": "dc"
+        "category": "2"
     },
     {
         "id": 109,
@@ -317,7 +317,7 @@
         "author": "David F. Sandberg",
         "image": "images/dc-9.jpg",
         "user": 2,
-        "category": "dc"
+        "category": "2"
     },
     {
         "id": 110,
@@ -327,6 +327,6 @@
         "author": "Cathy Yan",
         "image": "images/dc-10.jpg",
         "user": 1,
-        "category": "dc"
+        "category": "2"
     }
 ]

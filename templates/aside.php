@@ -6,7 +6,7 @@
                     <?php
                     if (isset($_SESSION['user'])) {
                     ?>
-                        <p class="login"><?= $_SESSION['user']->nickname ?></p>
+                        <p class="login">Hello <?= $_SESSION['user']->nickname ?></p>
                         <a href="?action=logout" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="logout-btn">Log out</a>
                     <?php
                     } else {

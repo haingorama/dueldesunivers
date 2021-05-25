@@ -1,14 +1,13 @@
-<?php
+<?php 
 
 namespace Entity;
 
 use ludk\Utils\Serializer;
 
-class User
+class Category
 {
     public $id;
-    public $nickname;
-    public $password;
+    public $category;
 
     use Serializer;
 }

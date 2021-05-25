@@ -1,12 +1,13 @@
 <?php
 
+use Entity\Movie;
+use Entity\User;
+use Entity\Category;
 use ludk\Persistence\ORM;
-use Entity\Movie; //utilise le bdd movie
-use Entity\User; // idem user
 
-require __DIR__ . "/../vendor/autoload.php"; // j'inclue redirige vers autoload.php
+require __DIR__ . "/../vendor/autoload.php";
 
-session_start(); //va utiliser la session
+session_start();
 
 $orm = new ORM(__DIR__ . '/../Ressources');
 
@@ -14,6 +15,7 @@ $manager = $orm->getManager();
 
 $movieRepo = $orm->getRepository(Movie::class);
 $userRepo = $orm->getRepository(User::class);
+$categoryRepo = $orm->getRepository(Category::class);
 
 $action = $_GET["action"] ?? "display";
 switch ($action) {
@@ -69,8 +71,7 @@ switch ($action) {
         }
         break;
     case 'new':
-
-        $movie = $movieRepo->findAll();
+        $categories = $categoryRepo->findAll();
         if (
             isset($_SESSION['user']) //la personne est connectée
             && isset($_POST['title'])
@@ -78,8 +79,7 @@ switch ($action) {
             && isset($_POST['date'])
             && isset($_POST['viewOrder'])
             && isset($_POST['image'])
-            && isset($_POST['category'])
-            && isset($_POST['movieId'])
+            && isset($_POST['categoryId'])
         ) {
             $errorMsg = NULL;
             if (strlen(trim($_POST['title'])) < 2) {
@@ -88,24 +88,24 @@ switch ($action) {
                 $errorMsg = "Your author should have at least 2 characters.";
             } else if (strlen(trim($_POST['date'])) == 0) {
                 $errorMsg = "Your content shouldn't be empty.";
-            } else if (intval($_POST['category']) == 0) {
-                $errorMsg = "You should choose an universe.";
+            } else if (intval(trim($_POST['viewOrder'])) == 0) {
+                $errorMsg =  "You should tell the order of view.";
             } else if (intval($_POST['image']) == 0) {
-                $errorMsg = "You should choose an image.";
-            } else if (intval($_POST['viewOrder']) == 0) {
-                $errorMsg = "You should tell the order of view.";
+                $errorMsg = "You should choose an image";
+            } else if (intval($_POST['categoryId']) == 0) {
+                $errorMsg = "You should choose an universe.";
             }
             if ($errorMsg) {
                 include "../templates/CreateForm.php";
             } else {
-                $movie = $movieRepo->find($_POST['movieId']);
+                $category = $categoryRepo->find($_POST['categoryId']);
                 $newMovie = new Movie();
                 $newMovie->title = trim($_POST['title']);
                 $newMovie->author = trim($_POST['author']);
-                $newMovie->order = trim($_POST['viewOrder']);
-                $newMovie->created_at = date("Y");
-                $newMovie->image = trim($_POST['image']);
-                $newMovie->category = trim($_POST['category']);
+                $newMovie->viewOrder = trim($_POST['viewOrder']);
+                $newMovie->date = date('Y');
+                $newMovie->image = intval($_POST['image']);
+                $newMovie->category = $category;
                 $newMovie->user = $_SESSION['user'];
                 $manager->persist($newMovie);
                 $manager->flush();
@@ -120,14 +120,14 @@ switch ($action) {
         $ItemsDc = [];
         $ItemsMarvel = [];
         if (isset($_GET["search"])) {
-            $ItemsDc = $movieRepo->findBy(array("category" => "dc", "title" => '%' . $_GET["search"] . '%'));
-            $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel", "title" => '%' . $_GET["search"] . '%'));
+            $ItemsDc = $movieRepo->findBy(array("category" => "1", "title" => '%' . $_GET["search"] . '%'));
+            $ItemsMarvel = $movieRepo->findBy(array("category" => "2", "title" => '%' . $_GET["search"] . '%'));
         } else {
-            $ItemsDc = $movieRepo->findBy(array("category" => "dc"));
-            $ItemsMarvel = $movieRepo->findBy(array("category" => "marvel"));
+            $ItemsDc = $movieRepo->findBy(array("category" => "1"));
+            $ItemsMarvel = $movieRepo->findBy(array("category" => "2"));
         }
 
-        include "../templates/display.php"; //vue html qui se trouve dans display
+        include "../templates/display.php";
 
         break;
 }

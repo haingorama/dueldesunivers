@@ -3,6 +3,7 @@
 namespace Entity;
 
 use Entity\User;
+use Entity\Category;
 use ludk\Utils\Serializer;
 
 class Movie
@@ -13,7 +14,7 @@ class Movie
     public $author;
     public $date;
     public $image;
-    public $category;
+    public Category $category;
     public User $user;
 
     use Serializer;
