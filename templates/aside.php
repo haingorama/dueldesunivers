@@ -7,12 +7,12 @@
                     if (isset($_SESSION['user'])) {
                     ?>
                         <p class="login">Hello <?= $_SESSION['user']->nickname ?></p>
-                        <a href="?action=logout" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="logout-btn">Log out</a>
+                        <a href="/logout" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="logout-btn">Log out</a>
                     <?php
                     } else {
                     ?>
-                        <a href="?action=login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="login-btn">Log in</a>
-                        <a href="?action=register" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" id="signup-btn">Sign up</a>
+                        <a href="/login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="login-btn">Log in</a>
+                        <a href="/register" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" id="signup-btn">Sign up</a>
                     <?php
                     }
                     ?>
@@ -33,7 +33,7 @@
                     <?php
                     if (isset($_SESSION['user'])) { //button s'affiche que quand on est connecté
                     ?>
-                        <a href="?action=new" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="logout-btn">Add movie</a>
+                        <a href="/new" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="logout-btn">Add movie</a>
                     <?php
                     }
                     ?>

@@ -6,7 +6,7 @@ include __DIR__ . "/header.php";
 include __DIR__ . "/aside.php";
 ?>
 
-<form class="form-signin" method="POST" action="?action=login" style="position: relative; z-index: index 2;">
+<form class="form-signin" method="POST" action="/login" style="position: relative; z-index: index 2;">
 	<h2 class="form-signin-heading">Welcome Back</h2>
 	<?php
 	if (isset($errorMsg)) {
