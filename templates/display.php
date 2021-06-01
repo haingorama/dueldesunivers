@@ -1,7 +1,4 @@
-<?php
-
-include __DIR__ . "/header.php";
-?>
+{% include '/header.php' %}
 
 <h2>Quel est le meilleur !</h2>
 
@@ -152,6 +149,4 @@ include __DIR__ . "/header.php";
     </div>
 </main>
 
-<?php
-include __DIR__ . "/footer.php";
-?>
+{% include '/footer.php' %}

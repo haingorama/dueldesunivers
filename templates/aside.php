@@ -4,9 +4,8 @@
             <ul>
                 <li>
                     <?php
-                    if (isset($_SESSION['user'])) {
+                    if ($request->getSession()->has('user')) {
                     ?>
-                        <p class="login">Hello <?= $_SESSION['user']->nickname ?></p>
                         <a href="/logout" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="logout-btn">Log out</a>
                     <?php
                     } else {
@@ -31,7 +30,7 @@
                         DC films</a></li>
                 <li>
                     <?php
-                    if (isset($_SESSION['user'])) { //button s'affiche que quand on est connecté
+                    if ($request->query->has('search')) {
                     ?>
                         <a href="/new" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="logout-btn">Add movie</a>
                     <?php

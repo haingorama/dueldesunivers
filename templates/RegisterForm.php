@@ -1,9 +1,6 @@
-<?php
-include __DIR__ . "/header.php";
-?>
-<?php
-include __DIR__ . "/aside.php";
-?>
+{% include '/header.php' %}
+
+{% include '/aside.php' %}
 
 <div class="container">
     <form class="form-signin" method="POST" action="/register" style="position: relative; z-index: index 2;">
@@ -22,6 +19,4 @@ include __DIR__ . "/aside.php";
 </div>
 </body>
 
-<?php
-include __DIR__ . "/footer.php";
-?>
+{% include '/footer.php' %}

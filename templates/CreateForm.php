@@ -1,15 +1,12 @@
-<?php
-include __DIR__ . "/header.php";
-?>
-<?php
-include __DIR__ . "/aside.php";
-?>
+{% include '/header.php' %}
+
+{% include '/aside.php' %}
 
 <div class="container">
     <div class="add-card" style="position: relative; z-index: index 2;">
         <h1 style="margin-top: 90px;" class="display-4">HEY YOU !!!</h1>
 
-        <form method="POST" action="?action=new">
+        <form method="POST" action="/new">
             <h2 class="form-signin-heading">Add a movie</h2>
             <?php
             if (isset($errorMsg)) {
@@ -38,6 +35,4 @@ include __DIR__ . "/aside.php";
     </div>
 </div>
 
-<?php
-include __DIR__ . "/footer.php";
-?>
+{% include '/footer.php' %}
