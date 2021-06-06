@@ -4,14 +4,15 @@
             <ul>
                 <li>
                     <?php
-                    if ($request->getSession()->has('user')) {
+                    if (isset($_SESSION['user'])) {
                     ?>
-                        <a href="/logout" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="logout-btn">Log out</a>
+                        <p class="login">Hello <?= $_SESSION['user']->nickname ?></p>
+                        <a href="?action=logout" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="logout-btn">Log out</a>
                     <?php
                     } else {
                     ?>
-                        <a href="/login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="login-btn">Log in</a>
-                        <a href="/register" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" id="signup-btn">Sign up</a>
+                        <a href="?action=login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="login-btn">Log in</a>
+                        <a href="?action=register" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" id="signup-btn">Sign up</a>
                     <?php
                     }
                     ?>
@@ -30,9 +31,9 @@
                         DC films</a></li>
                 <li>
                     <?php
-                    if ($request->query->has('search')) {
+                    if (isset($_SESSION['user'])) { //button s'affiche que quand on est connecté
                     ?>
-                        <a href="/new" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="logout-btn">Add movie</a>
+                        <a href="?action=new" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" id="logout-btn">Add movie</a>
                     <?php
                     }
                     ?>

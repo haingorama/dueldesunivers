@@ -1,9 +1,12 @@
-{% include '/header.php' %}
-
-{% include '/aside.php' %}
+<?php
+include __DIR__ . "/header.php";
+?>
+<?php
+include __DIR__ . "/aside.php";
+?>
 
 <div class="container">
-    <form class="form-signin" method="POST" action="/register" style="position: relative; z-index: index 2;">
+    <form class="form-signin" method="POST" action="?action=register" style="position: relative; z-index: index 2;">
         <h2 class="form-signin-heading">Enregistre toi</h2>
         <?php
         if (isset($errorMsg)) {
@@ -19,4 +22,6 @@
 </div>
 </body>
 
-{% include '/footer.php' %}
+<?php
+include __DIR__ . "/footer.php";
+?>

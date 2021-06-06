@@ -2,30 +2,22 @@
 
 namespace Controller;
 
-use Entity\Movie;
-use ludk\Http\Request;
-use ludk\Http\Response;
-use ludk\Controller\AbstractController;
-
-class HomeController extends AbstractController
+class HomeController
 {
-    public function display(Request $request): Response
+    public function display()
     {
-        $movieRepo = $this->getOrm()->getRepository(Movie::class);
+        global $movieRepo;
 
         $ItemsDc = [];
         $ItemsMarvel = [];
-        if ($request->query->has('search')) {
-            $ItemsDc = $movieRepo->findBy(array(category" => "2", "title" => '%' . $request->query->get('search') . '%'));
-            $ItemsMarvel = $movieRepo->findBy(array("category" => "1", "title" => '%' . $request->query->get('search') . '%'));
+        if (isset($_GET["search"])) {
+            $ItemsDc = $movieRepo->findBy(array("category" => "2", "title" => '%' . $_GET["search"] . '%'));
+            $ItemsMarvel = $movieRepo->findBy(array("category" => "1", "title" => '%' . $_GET["search"] . '%'));
         } else {
             $ItemsDc = $movieRepo->findBy(array("category" => "2"));
             $ItemsMarvel = $movieRepo->findBy(array("category" => "1"));
         }
-        $data = array(
-            "onemovie" => $ItemsDc,
-            "onemovie" => $ItemsMarvel
-        );
-        return $this->render("display.php", $data);
+
+        include "../templates/display.php";
     }
 }
