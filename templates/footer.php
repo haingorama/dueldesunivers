@@ -2,7 +2,7 @@
     <div class="ancre"><a href="#ancre"><img src="images/up.png" alt="ancre haut"></a></div>
 
     <footer>
-        <p>Haingo Ramaroson</p>
+        <p>&copy; 2021.  Le Duel des Univers | Haingo Ramaroson</p>
     </footer>
 
     <!-- partial -->
