@@ -9,7 +9,7 @@ include __DIR__ . "/aside.php";
     <div class="add-card" style="position: relative; z-index: index 2;">
         <h1 style="margin-top: 90px;" class="display-4">HEY YOU !!!</h1>
 
-        <form method="POST" action="?action=new">
+        <form method="POST" action="/new">
             <h2 class="form-signin-heading">Add a movie</h2>
             <?php
             if (isset($errorMsg)) {

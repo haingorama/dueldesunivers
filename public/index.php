@@ -20,7 +20,8 @@ $movieRepo = $orm->getRepository(Movie::class);
 $userRepo = $orm->getRepository(User::class);
 $categoryRepo = $orm->getRepository(Category::class);
 
-$action = $_GET["action"] ?? "display";
+$action =substr(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH),1);
+
 switch ($action) {
 
     case 'register':

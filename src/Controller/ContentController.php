@@ -48,7 +48,7 @@ class ContentController
                 $newMovie->user = $_SESSION['user'];
                 $manager->persist($newMovie);
                 $manager->flush();
-                header('Location: ?action=display');
+                header('Location: /display');
             }
         } else {
             include "../templates/CreateForm.php";
