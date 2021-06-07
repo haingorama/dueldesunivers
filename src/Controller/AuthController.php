@@ -3,68 +3,82 @@
 namespace Controller;
 
 use Entity\User;
+use ludk\Http\Request;
+use ludk\Http\Response;
+use ludk\Controller\AbstractController;
 
-class AuthController
+class AuthController extends AbstractController
 {
-    public function login()
+    public function login(Request $request): Response
     {
-        global $userRepo;
+        $userRepo = $this->getOrm()->getRepository(User::class);
 
-        if (isset($_POST['username']) && isset($_POST['password'])) {
+        if ($request->request->has('username') && $request->request->has('password')) {
             $criateWithloginAndPawword = [
-                "nickname" => $_POST['username'],
-                "password" => $_POST['password']
+                "nickname" => $request->request->get('username'),
+                "password" => $request->request->get('password')
             ];
             $usersWithThisNicknameAndPassword = $userRepo->findBy($criateWithloginAndPawword);
             if (count($usersWithThisNicknameAndPassword) == 1) {
-                $_SESSION['user'] = $usersWithThisNicknameAndPassword[0];
-                header('Location: /display');
+                $request->getSession()->set("user", $usersWithThisNicknameAndPassword[0]);
+                return $this->redirectToRoute("display");
             } else {
                 $errorMsg = "Wrong login and/or password.";
-                include "../templates/loginForm.php";
+                $data = array(
+                    "errorMsg" => $errorMsg
+                );
+                return $this->render("loginForm.php", $data);
             }
         } else {
-            include "../templates/loginForm.php";
+            return $this->render("loginForm.php");
         }
     }
 
-    public function logout()
+    public function logout(Request $request): Response
     {
-        if (isset($_SESSION['user'])) {
-            unset($_SESSION['user']);
+        if ($request->getSession()->has('user')) {
+            $request->getSession()->remove('user');
         }
-        header('Location: /display');
+        return $this->redirectToRoute("display");
     }
 
-    public function register()
+    public function register(Request $request): Response
     {
-        global $userRepo;
-        global $manager;
+        $userRepo = $this->getOrm()->getRepository(User::class);
+        $manager = $this->getOrm()->getManager();
         
-        if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['passwordRetype'])) {
-            $usersWithThisUsername = $userRepo->findBy(["nickname" => $_POST["username"]]);
+        if ($request->request->has('username') && $request->request->has('password') && $request->request->has('passwordRetype')) {
+            // $usersWithThisUsername = $userRepo->findBy("nickname" -> $request->request->get('username'));
+            $errorMsg = NULL;
+            $criateriaWithlogin = [
+                "nickname" => $request->request->get('username')
+            ];
+            $usersWithThisUsername = $userRepo->findBy($criateriaWithlogin);
             if (count($usersWithThisUsername) > 0) {
                 $errorMsg = "Nickname already used.";
-            } else if ($_POST['password'] != $_POST['passwordRetype']) {
+            } else if ($request->request->get('password') != $request->request->get('passwordRetype')) {
                 $errorMsg = "Passwords are not the same.";
-            } else if (strlen(trim($_POST['password'])) < 4) {
+            } else if (strlen(trim($request->request->get('password'))) < 4) {
                 $errorMsg = "Your password should have at least 4 characters.";
-            } else if (strlen(trim($_POST['username'])) < 4) {
+            } else if (strlen(trim($request->request->get('username'))) < 4) {
                 $errorMsg = "Your nickame should have at least 4 characters.";
             }
             if ($errorMsg) {
-                include "../templates/RegisterForm.php";
+                $data = array(
+                    "errorMsg" => $errorMsg
+                );
+                return $this->render("RegisterForm.php", $data);
             } else {
                 $newUser = new User();
-                $newUser->nickname = $_POST['username'];
-                $newUser->password = $_POST['password'];
+                $newUser->nickname = $request->request->get('username');
+                $newUser->password = $request->request->get('password');
                 $manager->persist($newUser);
                 $manager->flush();
-                $_SESSION['user'] = $newUser;
-                header('Location: /display');
+                $request->getSession()->set("user", $newUser);
+                return $this->redirectToRoute("display");
             }
         } else {
-            include "../templates/RegisterForm.php";
+            return $this->render("RegisterForm.php");
         }
-    }
+    }  
 }

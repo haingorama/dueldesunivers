@@ -122,6 +122,4 @@
 
             <h1 class="glitch" data-text="Le duel des univers">Le duel des univers</h1>
 
-            <?php
-            include __DIR__ . "/aside.php";
-            ?>
+            <!-- {% include "/aside.php" %} -->

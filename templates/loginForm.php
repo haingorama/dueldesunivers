@@ -1,10 +1,6 @@
-<?php
-include __DIR__ . "/header.php";
-?>
+{% include "/header.php" %}
 
-<?php
-include __DIR__ . "/aside.php";
-?>
+{% include "/aside.php" %}
 
 <form class="form-signin" method="POST" action="/login" style="position: relative; z-index: index 2;">
 	<h2 class="form-signin-heading">Welcome Back</h2>
@@ -18,6 +14,4 @@ include __DIR__ . "/aside.php";
 	<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
 </form>
 
-<?php
-include __DIR__ . "/footer.php";
-?>
+{% include "/footer.php" %}

@@ -1,9 +1,6 @@
-<?php
-include __DIR__ . "/header.php";
-?>
-<?php
-include __DIR__ . "/aside.php";
-?>
+{% include "/header.php" %}
+
+{% include "/aside.php" %}
 
 <div class="container">
     <div class="add-card" style="position: relative; z-index: index 2;">
@@ -38,6 +35,4 @@ include __DIR__ . "/aside.php";
     </div>
 </div>
 
-<?php
-include __DIR__ . "/footer.php";
-?>
+{% include "/footer.php" %}

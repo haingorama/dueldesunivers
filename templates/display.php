@@ -1,6 +1,9 @@
-<?php
+{% include "/header.php" %}
 
-include __DIR__ . "/header.php";
+{% include "/aside.php" %}
+
+<!-- <?php
+// include __DIR__ . "/header.php";
 ?>
 
 <h2>Quel est le meilleur !</h2>
@@ -111,7 +114,7 @@ include __DIR__ . "/header.php";
             }
             ?>
 
-            <h3>Tous les films par ordre de visionnage</h3>
+            <!-- <h3>Tous les films par ordre de visionnage</h3>
             <ol>
                 <li>Wonder Woman (2017)</li>
                 <li>Superman et les hommes taupes (1951)</li>
@@ -147,11 +150,9 @@ include __DIR__ . "/header.php";
                 <li>Shazam (2018)</li>
                 <li>Oiseaux de proie (2020)</li>
                 <li>La brigade suicide (2021)</li>
-            </ol>
+            </ol> -->
         </section>
     </div>
 </main>
 
-<?php
-include __DIR__ . "/footer.php";
-?>
+{% include "/footer.php" %}
