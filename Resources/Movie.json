@@ -32,9 +32,9 @@
     {
         "id": 4,
         "viewOrder": 4,
-        "title": "Thor",
-        "date": "2011",
-        "author": "Kenneth Branagh",
+        "title": "Iron Man 2",
+        "date": "2010",
+        "author": "Jon Favreau",
         "image": "images/4-marvel.jpg",
         "user": 2,
         "category": "1"
@@ -43,8 +43,8 @@
         "id": 5,
         "viewOrder": 5,
         "title": "L'Incroyable Hulk",
-        "date": "2008",
-        "author": "Louis Leterrier",
+        "date": "2011",
+        "author": "Kenneth Branagh",
         "image": "images/5-marvel.jpg",
         "user": 2,
         "category": "1"
@@ -52,9 +52,9 @@
     {
         "id": 6,
         "viewOrder": 6,
-        "title": "Captain Marvel",
-        "date": "2019",
-        "author": "Anna Boden",
+        "title": "L'Incroyable Hulk",
+        "date": "2008",
+        "author": "Louis Leterrier",
         "image": "images/6-marvel.jpg",
         "user": 2,
         "category": "1"
