@@ -1,5 +1,6 @@
 <?php 
-namespace ContentController;
+
+namespace Controller;
 
 use Entity\Category;
 use Entity\Movie;
@@ -44,7 +45,6 @@ class ContentController extends AbstractController
                     "categories" => $categories
                 );
                 return $this->render("CreateForm.php", $data);
-                // include "../templates/CreateForm.php";
             } else {
                 $category = $categoryRepo->find($request->request->get('categoryId'));
                 $newMovie = new Movie();

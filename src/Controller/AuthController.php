@@ -48,7 +48,6 @@ class AuthController extends AbstractController
         $manager = $this->getOrm()->getManager();
         
         if ($request->request->has('username') && $request->request->has('password') && $request->request->has('passwordRetype')) {
-            // $usersWithThisUsername = $userRepo->findBy("nickname" -> $request->request->get('username'));
             $errorMsg = NULL;
             $criateriaWithlogin = [
                 "nickname" => $request->request->get('username')
